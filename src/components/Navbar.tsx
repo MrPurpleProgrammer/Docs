@@ -17,7 +17,7 @@ import Link from "next/link";
 
 export default function NavBar() {
   return (
-    <nav className="w-full flex items-center justify-between px-7 h-20">
+    <nav className="w-full flex items-center justify-between px-7 h-20 bg-[#F1F2F6]">
       <div className="flex items-center gap-5">
         <Link href="/">
           <Image
