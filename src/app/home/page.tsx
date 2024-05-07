@@ -1,5 +1,6 @@
 
 
+import Footer from '@/components/Footer';
 import BlogContainer from '../../sections/BlogContainer';
 import Sidebar from '../../sections/Sidebar';
 
@@ -12,6 +13,7 @@ export default function Page() {
         </div>
         <Sidebar/>
         <BlogContainer/>
+        <Footer />
         </div>
     );
   }

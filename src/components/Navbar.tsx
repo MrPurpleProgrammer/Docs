@@ -1,19 +1,10 @@
 import Image from "next/image";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  Input,
-  DropdownItem,
-  DropdownTrigger,
-  Dropdown,
-  DropdownMenu,
-  Avatar,
-  Button,
-} from "@nextui-org/react";
-import { Spacer } from "@nextui-org/react";
+import {Input,Button} from "@nextui-org/react";
 import Link from "next/link";
+import wavefuelLogo from '../assets/wavefuelLogo.svg'
+import materialSymbolsSearch from '../assets/materialSymbolsSearch.svg'
+import linkedin from '../assets/linkedin.svg'
+import github from '../assets/github.svg'
 
 export default function NavBar() {
   return (
@@ -24,7 +15,7 @@ export default function NavBar() {
             className="h-12 min-w-10"
             width={97}
             height={33}
-            src="/images/wavefuel-logo.svg"
+            src= {wavefuelLogo}
             alt=""
           />
         </Link>
@@ -42,15 +33,15 @@ export default function NavBar() {
           size="sm"
           endContent={
             <Image
-              src="/images/material-symbols-search.svg"
+              src={materialSymbolsSearch}
               width={24}
               height={24}
               alt=""
             />
           }
         />
-        <Image src="/images/mdi-github.svg" width={33} height={33} alt="" />
-        <Image src="/images/mdi-linkedin.svg" width={33} height={33} alt="" />
+        <Image src={github} width={33} height={33} alt="" />
+        <Image src={linkedin} width={33} height={33} alt="" />
         <Button className="bg-purple-900 opacity-70 text-white">Signin</Button>
       </div>
     </nav>
