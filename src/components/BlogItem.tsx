@@ -10,6 +10,11 @@ type propsType={
 }
 export default function BlogItem(props:propsType) {
 return (<div className="col-span-6 flex flex-col justify-start h-[100%]">
+    <style jsx>{`
+        .blog-external-link {
+          stroke:#101828
+        }
+      `}</style>
         <Image src={props.image} alt="primary-blog-image" className='col-span-6 border w-full mb-3 h-fit'/>
         
             <div className="postCardContent">
@@ -17,7 +22,7 @@ return (<div className="col-span-6 flex flex-col justify-start h-[100%]">
                     <p className="author text-[#6941c6] text-xs mb-3">{props.author}</p>
                     <div className='blogHeadingIcon flex flex-row justify-between'>
                         <a href="#" className='guide text-xl font-semibold text-[#101828] mb-3'>{props.guide}</a>
-                        <Image src={iconwrap} width={20} height={20} alt="navigate-icon"/>
+                        <Image src={iconwrap} width={20} height={20} alt="navigate-icon" className='blog-external-link self-start'/>
                     </div>
                     <p className='about text-sm text-[#475467] mb-3'>
                        {props.topic}

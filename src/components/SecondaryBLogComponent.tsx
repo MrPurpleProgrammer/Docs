@@ -11,7 +11,7 @@ type propsType={
 }
 export default function SecondaryBLogComponent(props:propsType) {
 return (
-<div className="col-span-6 flex flex-col justify-start mb-3">
+<div className="col-span-6 flex flex-col justify-start mb-2">
     
     <div className="col-span-6 flex flex-row justify-start">
         <div className='col-span-6 min-h-fit w-[40%]'>

@@ -70,7 +70,7 @@ export default function Footer() {
       </div>
       <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm sm:text-center text-zinc-900 opacity-50 ">© Made by <span className="text-emerald-400">Aditya Sayyaparahu</span> - Powered by <a href="#" className="hover:underline text-emerald-400 text-sm">Wavefuel™</a></span>
+          <span className="text-sm sm:text-center text-zinc-900 opacity-50 ">© Made by <span className="text-emerald-400">Aditya Sayyaparaju</span> - Powered by <a href="#" className="hover:underline text-emerald-400 text-sm">Wavefuel™</a></span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <div className="w-[191px] h-[22px] justify-start items-start gap-8 inline-flex">
             <span className="text-zinc-900 opacity-25 text-sm font-medium font-['Inter'] leading-snug">Impressum</span>
