@@ -1,102 +1,251 @@
-import React from 'react';
-import { FaChevronRight,FaChevronDown } from 'react-icons/fa';
+import React from "react";
+import { FaChevronRight, FaChevronDown } from "react-icons/fa";
 
 const VerticalSidebar = () => {
   return (
-    <div className="menubar col-span-3 pl-12 h-screen">
-      <div className="px-4">
-        <h2 className="text-sm font-semibold mb-4 flex items-center text-[#6941c6]">
-           GETTING STARTED
+    <div className="pl-10">
+      <div>
+        <h2 className="text-lg font-extrabold flex items-center text-[#6941c6] pb-5">
+          {false ? (
+            <FaChevronRight className="pr-2" />
+          ) : (
+            <span className="pr-2 w-4"></span>
+          )}
+          <span className="pl-2">GETTING STARTED</span>
         </h2>
-        <ul className="space-y-2 text-[#454545] text-xs">
+        <ul className="space-y-3 text-[#454545] text-sm pb-5">
           <li className="flex items-center">
-          <FaChevronDown className="mr-2"/> Quickstart
+            {true ? (
+              <FaChevronRight className="pr-2 rotate-90 self-end" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+
+            <span className="pl-2">Quickstart</span>
           </li>
           <li className="flex items-center">
-             Set up
+            {false ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+            <span className="pl-2">Set up</span>
           </li>
           <li className="flex items-center">
-             Import data
+            {false ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+            <span className="pl-2">Import data</span>
           </li>
           <li className="flex items-center">
-             Layout
+            {false ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+            <span className="pl-2">Layout</span>
           </li>
           <li className="flex items-center">
-             Style data
+            {false ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+            <span className="pl-2">Style data</span>
           </li>
           <li className="flex items-center">
-             Add tooltips
-          </li>
-          <li className="flex items-center"><FaChevronRight className="mr-2 self-start" /> Resources</li>
-        </ul>
-        
-        <h2 className="text-sm font-semibold mt-3 mb-4 flex items-center text-[#6941c6]">
-           MAIN CONCEPTS
-        </h2>
-        <ul className="space-y-2 text-xs">
-          <li className="flex items-center">
-             Selections
+            {false ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+            <span className="pl-2">Add tooltips</span>
           </li>
           <li className="flex items-center">
-             Dynamic properties
+            {true ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+            <span className="pl-2">Resources</span>
           </li>
-          <li className="flex items-center">
-             Transformation
-          </li>
-          <li className="flex items-center">
-             Animations
-          </li>
-          
         </ul>
 
-        <h2 className="text-sm font-semibold mt-8 mb-4 flex items-center text-[#6941c6]">
-           API REFERENCE
+        <h2 className="text-lg font-extrabold flex items-center text-[#6941c6] pb-5">
+          {false ? (
+            <FaChevronDown className="pr-2" />
+          ) : (
+            <span className="pr-2 w-4"></span>
+          )}
+          <span className="pl-2">MAIN CONCEPTS</span>
         </h2>
-        <ul className="space-y-2 text-xs">
+        <ul className="space-y-3 text-sm pb-5">
           <li className="flex items-center">
-            <FaChevronRight className="mr-2" /> Axes
+            {false ? (
+              <FaChevronDown className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+            <span className="pl-2">Selections</span>
           </li>
           <li className="flex items-center">
-            <FaChevronRight className="mr-2" /> Brushes
+            {false ? (
+              <FaChevronDown className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+            <span className="pl-2">Dynamic properties</span>
           </li>
           <li className="flex items-center">
-            <FaChevronRight className="mr-2" /> Chords
+            {false ? (
+              <FaChevronDown className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+            <span className="pl-2">Transformation</span>
           </li>
           <li className="flex items-center">
-            <FaChevronRight className="mr-2" /> Collections
+            {false ? (
+              <FaChevronDown className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+            <span className="pl-2">Animations</span>
           </li>
-          <li className="flex items-center">
-            <FaChevronRight className="mr-2" /> Colors
-          </li>
-          <li className="flex items-center">
-            <FaChevronRight className="mr-2" /> Color Schemes
-          </li>
-          <li className="flex items-center">
-            <FaChevronRight className="mr-2" /> Contours
-          </li>
-          <li className="flex items-center">
-            <FaChevronRight className="mr-2" /> Dispatches
-          </li>
-          <li className="flex items-center">
-            <FaChevronRight className="mr-2" /> Dragging
-          </li>
-          <li className="flex items-center">
-            <FaChevronRight className="mr-2" /> Delimiter
-          </li>
-          <li className="flex items-center">
-            <FaChevronRight className="mr-2" /> Easing
-          </li>
-          <li className="flex items-center">
-            <FaChevronRight className="mr-2" /> Fetches
-          </li>
-          <li className="flex items-center">
-            <FaChevronRight className="mr-2" /> Forces
-          </li>
-          <li className="flex items-center">
-            <FaChevronRight className="mr-2" /> Number Formats
-          </li>
+        </ul>
 
-          
+        <h2 className="text-lg font-extrabold flex items-center text-[#6941c6] pb-5">
+          {false ? (
+            <FaChevronDown className="pr-2" />
+          ) : (
+            <span className="pr-2 w-4"></span>
+          )}
+          <span className="pl-2 ">API REFERENCE</span>
+        </h2>
+        <ul className="space-y-3 text-sm pb-5">
+          <li className="flex items-center">
+            {true ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+            <span className="pl-2">Axes</span>
+          </li>
+          <li className="flex items-center">
+            {true ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+
+            <span className="pl-2">Brushes</span>
+          </li>
+          <li className="flex items-center">
+            {true ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+
+            <span className="pl-2">Chords</span>
+          </li>
+          <li className="flex items-center">
+            {true ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+
+            <span className="pl-2">Collections</span>
+          </li>
+          <li className="flex items-center">
+            {true ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+
+            <span className="pl-2">Colors</span>
+          </li>
+          <li className="flex items-center">
+            {true ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+
+            <span className="pl-2">Color Schemes</span>
+          </li>
+          <li className="flex items-center">
+            {true ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+
+            <span className="pl-2">Contours</span>
+          </li>
+          <li className="flex items-center">
+            {true ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+
+            <span className="pl-2">Dispatches</span>
+          </li>
+          <li className="flex items-center">
+            {true ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+
+            <span className="pl-2">Dragging</span>
+          </li>
+          <li className="flex items-center">
+            {true ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+
+            <span className="pl-2">Delimiter</span>
+          </li>
+          <li className="flex items-center">
+            {true ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+            <span className="pl-2">Easing</span>
+          </li>
+          <li className="flex items-center">
+            {true ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+            <span className="pl-2">Fetches</span>
+          </li>
+          <li className="flex items-center">
+            {true ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+            <span className="pl-2">Forces</span>
+          </li>
+          <li className="flex items-center">
+            {true ? (
+              <FaChevronRight className="pr-2" />
+            ) : (
+              <span className="pr-2 w-4"></span>
+            )}
+            <span className="pl-2">Number Formats</span>
+          </li>
         </ul>
       </div>
     </div>
