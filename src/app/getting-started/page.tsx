@@ -12,10 +12,10 @@ export default function GettingStarted() {
       <VerticalSidebar />
 
       <div className="col-span-2">
-        {/* <QuickStart />
-        <hr className="w-full" />
-        <SetUp /> */}
-        <hr className="w-full" />
+        <QuickStart />
+        <hr className="w-full mt-2" />
+        <SetUp />
+        <hr className="w-full " />
         <QSImport />
         <hr className="w-full" />
         <QSLayout />

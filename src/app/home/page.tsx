@@ -20,7 +20,7 @@ export default function Page() {
         <BlogContainer />
       </div>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
