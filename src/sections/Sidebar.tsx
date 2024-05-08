@@ -1,8 +1,8 @@
 "use client"
 import CardItem from '../components/CardItem'
-
+const CardDataList=[]
 export default function Sidebar() {
-return (<div className='sidebar-container w-full min-h-fit pl-5'>
+return (<div className='sidebar-container w-full min-h-fit pl-5 pb-4 pt-10'>
     <style jsx>{`
         .sidemenu {
           margin-bottom: 32px;

@@ -5,9 +5,9 @@ import image from '../assets/image.svg';
 import postcarditem from '../assets/postcarditem.svg';
 
 export default function BlogContainer() {
-return (<div className="w-full h-[800px] pl-5">
-    <h1 className="font-semibold text-xl pb-5">Check Out of our Guides</h1>
-    <div className="w-full h-[100%] flex flex-row">
+return (<div className="w-full h-[800px] pl-5 pb-4 pt-10">
+    <h1 className="font-semibold text-xl pb-4" >Check Out of our Guides</h1>
+    <div className="w-full h-[100%] flex flex-row pt-4">
     <BlogItem image={image} author="Olivia Rhye • 20 Jan 2022" guide="Alexa Integration Guide" topic=" How do you create compelling presentations that wow your colleagues and impress your managers?"/>
     <div className="col-span-6 flex flex-col justify-items-auto content-evenly pl-5">
     <SecondaryBLogComponent image={postcarditem} author="Phoenix Baker • 19 Jan 2022" guide="Migrating your devices to Lighthouse" topic="Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get..."/>
