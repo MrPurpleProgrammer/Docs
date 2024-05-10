@@ -27,7 +27,7 @@ const secondaryBlogComponents = [
   },
 ];
 const BlogContainer = () => (
-  <div className="w-full pl-5 pb-4 pt-10">
+  <div className="w-full pb-4 pt-10">
     <h1 className="font-semibold text-xl pb-4">Check Out of our Guides</h1>
     <div className="grid grid-cols-2 gap-4">
       <div className="w-full ">

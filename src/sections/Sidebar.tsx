@@ -73,7 +73,7 @@ const Sidebar = () => {
     }
   };
   return (
-    <div className="sidebar-container w-full min-h-fit pl-5 pb-4 pt-10">
+    <div className="sidebar-container w-full min-h-fit pb-4 pt-10">
       <ul className="sidemenu flex flex-wrap text-sm font-sm text-center mb-4">
         <li className="me-2">
           <Button
@@ -92,9 +92,8 @@ const Sidebar = () => {
 
         {uniqueSidebarItems &&
           uniqueSidebarItems?.map((listitem, index) => (
-            <li className="me-2">
+            <li key={index} className="me-2">
               <Button
-                key={index}
                 aria-current="page"
                 className={cn(
                   "inline-block p-2 font-semibold bg-transparent hover:bg-[#F9F5ff] text-[#667085]",
