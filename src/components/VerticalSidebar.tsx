@@ -1,10 +1,202 @@
+import { Item } from "@radix-ui/react-dropdown-menu";
 import { ChevronRight, ChevronDown } from "lucide-react";
+import { title } from "process";
 import React from "react";
+// import { Accordion } from "./ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./ui/accordion";
+
+const sidebarData = [
+  {
+    mainTitle: "GETTING STARTED",
+    mainItems: [
+      {
+        title: "Quickstart",
+        href: "/",
+        titleItems: [
+          { subTitle: "Set up", href: "/" },
+          { subTitle: "Import data", href: "/" },
+          { subTitle: "Layout", href: "/" },
+          { subTitle: "Style data", href: "/" },
+          { subTitle: "Add tooltips", href: "/" },
+        ],
+      },
+      {
+        title: "Resources",
+        href: "/",
+        titleItems: [{ subTitle: "Set up", href: "/" }],
+      },
+    ],
+  },
+  {
+    mainTitle: "MAIN CONCEPTS",
+    mainItems: [
+      { title: "Selections", href: "/" },
+      { title: "Dynamic properties", href: "/" },
+      { title: "Transformation", href: "/" },
+      { title: "Animations", href: "/" },
+    ],
+  },
+  {
+    mainTitle: "API REFERENCE",
+    mainItems: [
+      {
+        title: "Axes",
+        href: "/",
+        titleItems: [
+          { subTitle: "Empty-1", href: "/" },
+          { subTitle: "Empty-2", href: "/" },
+        ],
+      },
+      {
+        title: "Brushes",
+        href: "/",
+        titleItems: [
+          { subTitle: "Empty-1", href: "/" },
+          { subTitle: "Empty-2", href: "/" },
+        ],
+      },
+      {
+        title: "Chords",
+        href: "/",
+        titleItems: [
+          { subTitle: "Empty-1", href: "/" },
+          { subTitle: "Empty-2", href: "/" },
+        ],
+      },
+      {
+        title: "Collections",
+        href: "/",
+        titleItems: [
+          { subTitle: "Empty-1", href: "/" },
+          { subTitle: "Empty-2", href: "/" },
+        ],
+      },
+      {
+        title: "Colors",
+        href: "/",
+        titleItems: [
+          { subTitle: "Empty-1", href: "/" },
+          { subTitle: "Empty-2", href: "/" },
+        ],
+      },
+      {
+        title: "Color Schemes",
+        href: "/",
+        titleItems: [
+          { subTitle: "Empty-1", href: "/" },
+          { subTitle: "Empty-2", href: "/" },
+        ],
+      },
+      {
+        title: "Contours",
+        href: "/",
+        titleItems: [
+          { subTitle: "Empty-1", href: "/" },
+          { subTitle: "Empty-2", href: "/" },
+        ],
+      },
+      {
+        title: "Dispatches",
+        href: "/",
+        titleItems: [
+          { subTitle: "Empty-1", href: "/" },
+          { subTitle: "Empty-2", href: "/" },
+        ],
+      },
+      {
+        title: "Dragging",
+        href: "/",
+        titleItems: [
+          { subTitle: "Empty-1", href: "/" },
+          { subTitle: "Empty-2", href: "/" },
+        ],
+      },
+      {
+        title: "Delimiter",
+        href: "/",
+        titleItems: [
+          { subTitle: "Empty-1", href: "/" },
+          { subTitle: "Empty-2", href: "/" },
+        ],
+      },
+      {
+        title: "Easing",
+        href: "/",
+        titleItems: [
+          { subTitle: "Empty-1", href: "/" },
+          { subTitle: "Empty-2", href: "/" },
+        ],
+      },
+      {
+        title: "Fetches",
+        href: "/",
+        titleItems: [
+          { subTitle: "Empty-1", href: "/" },
+          { subTitle: "Empty-2", href: "/" },
+        ],
+      },
+      {
+        title: "Forces",
+        href: "/",
+        titleItems: [
+          { subTitle: "Empty-1", href: "/" },
+          { subTitle: "Empty-2", href: "/" },
+        ],
+      },
+      {
+        title: "Number Formats",
+        href: "/",
+        titleItems: [
+          { subTitle: "Empty-1", href: "/" },
+          { subTitle: "Empty-2", href: "/" },
+        ],
+      },
+    ],
+  },
+];
 
 const VerticalSidebar = () => {
   return (
     <div className="px-6 ">
-      <div>
+      {sidebarData.map((section) => (
+        <div key={section.mainTitle} className="text-black">
+          <h2 className="text-lg  font-extrabold flex items-center text-[#6941c6] pb-5">
+            {section.mainTitle}
+          </h2>
+          {section.mainItems.map((item) =>
+            item?.titleItems && item?.titleItems.length > 0 ? (
+              <Accordion
+                key={item.title}
+                type="single"
+                collapsible
+                className="text-black"
+              >
+                <AccordionItem value={item.title}>
+                  <AccordionTrigger>{item.title}</AccordionTrigger>
+                  <AccordionContent>
+                    {item.titleItems.map((subItem) => (
+                      <div key={subItem.subTitle}>
+                        <span className="px-7">{subItem.subTitle}</span>
+                      </div>
+                    ))}
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            ) : (
+              <div className="px-7" key={item.title}>
+                {item.title}
+              </div>
+            )
+          )}
+        </div>
+      ))}
+
+      {/* <div>
         <h2 className="text-lg  font-extrabold flex items-center text-[#6941c6] pb-5">
           {false ? (
             <ChevronRight className="pr-2" />
@@ -246,7 +438,7 @@ const VerticalSidebar = () => {
             <span>Number Formats</span>
           </li>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 };

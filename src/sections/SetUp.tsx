@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { Item } from "@radix-ui/react-dropdown-menu";
 import { CodeBlockWrapper } from "@/components/ui/code-block";
+import { Heading } from "lucide-react";
 
 const SetupItems = [
   {
@@ -42,6 +43,10 @@ const SetupItems = [
       "ZigBee is an open, global, packet-based protocol designed to provide an easy-to-use architecture for secure, reliable, low power wireless networks. Flow or process control equipment can be place anywhere and still communicate with the rest of the system. It can also be moved, since the network doesn’t care about the physical location of a sensor, pump or valve.",
     content_2:
       "ZigBee is a standard that addresses the need for very low-cost implementation of Low power devices with Low data rates for short-range wireless communications.",
+  },
+  {
+    id: 5,
+    headings: "OCPP 1.6j",
   },
 ];
 

@@ -1,32 +1,27 @@
 import Image from "next/image";
 import star from "../assets/star.svg";
 import Link from "next/link";
+
+const nextDocsLinks = [
+  { title: "Selections", link: "/selections" },
+  { title: "Dynamic properties", link: "/dynamic-properties" },
+  { title: "Transformation", link: "/transformation" },
+  { title: "Animations", link: "/animations" },
+];
+
 const Feedback = () => (
   <div className="flex flex-col w-full">
     <h1 className="font-extrabold text-[#6941c6] text-lg">
       Next Docs to Read...
     </h1>
     <ul>
-      <li>
-        <Link href="#" className="underline text-[#A7A7A7] text-sm">
-          Selections
-        </Link>
-      </li>
-      <li>
-        <Link href="#" className="underline text-[#A7A7A7] text-sm">
-          Dynamic properties
-        </Link>
-      </li>
-      <li>
-        <Link href="#" className="underline text-[#A7A7A7] text-sm">
-          Transformation
-        </Link>
-      </li>
-      <li>
-        <Link href="#" className="underline text-[#A7A7A7] text-sm">
-          Animations
-        </Link>
-      </li>
+      {nextDocsLinks.map((item, index) => (
+        <li key={index}>
+          <Link href={item.link} className="underline text-[#A7A7A7] text-sm">
+            {item.title}
+          </Link>
+        </li>
+      ))}
     </ul>
     <div className="pt-8">
       <h1 className="font-extrabold text-[#6941c6] text-lg">
