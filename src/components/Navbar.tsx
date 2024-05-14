@@ -1,11 +1,24 @@
+/* eslint-disable react/no-unescaped-entities */
+"use client";
 import Image from "next/image";
 import { Input, Button } from "@nextui-org/react";
+import { Button as UIButton } from "./ui/button";
 import Link from "next/link";
 import wavefuelLogo from "../assets/wavefuelLogo.svg";
 import materialSymbolsSearch from "../assets/materialSymbolsSearch.svg";
 import linkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
 import { SearchBar } from "./SearchBar";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 import {
   DropdownMenu,
@@ -16,6 +29,17 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
+import { AlignJustify } from "lucide-react";
+import { useState } from "react";
+import VerticalSidebar from "./VerticalSidebar";
+import { sidebarData } from "@/config/sidebarData";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./ui/accordion";
+
 export default function NavBar() {
   const navbarLinks = [
     { title: "Getting Started", link: "/getting-started" },
@@ -25,18 +49,79 @@ export default function NavBar() {
   ];
 
   return (
-    <nav className="w-full  flex bg-[#F1F2F6] ">
+    <nav className="w-full  flex bg-background">
       <div className="w-full lg:max-w-[90%] px-3  mx-auto flex items-center justify-between h-20 overflow-x-hidden">
         <div className="flex items-center xmd:gap-5">
-          <Link href="/home">
-            <Image
-              className="h-12 min-w-10"
-              width={97}
-              height={33}
-              src={wavefuelLogo}
-              alt=""
-            />
-          </Link>
+          <div className="flex justify-center items-center gap-2">
+            <Sheet>
+              <SheetTrigger asChild>
+                <UIButton
+                  variant="outline"
+                  size="icon"
+                  className="lg:hidden flex justify-center items-center"
+                >
+                  <AlignJustify className="w-5 h-5 stroke-foreground" />
+                </UIButton>
+              </SheetTrigger>
+              <SheetContent side="left" className="overflow-auto max-w-[75%]">
+                {sidebarData.map((section) => (
+                  <div key={section.mainTitle} className="text-black">
+                    <h2 className="text-sm font-extrabold flex items-center text-[#6941C6] pb-1">
+                      {section.mainTitle}
+                    </h2>
+                    {section.mainItems.map((item) => {
+                      if ("titleItems" in item) {
+                        return item.titleItems && item.titleItems.length > 0 ? (
+                          <Accordion
+                            key={item.title}
+                            type="single"
+                            collapsible
+                            className="text-black "
+                          >
+                            <AccordionItem value={item.title}>
+                              <AccordionTrigger className="text-[13px] gap-1">
+                                {item.title}
+                              </AccordionTrigger>
+                              <AccordionContent>
+                                {item.titleItems.map((subItem) => (
+                                  <div key={subItem.subTitle}>
+                                    <span className="px-4 text-[12px]">
+                                      {subItem.subTitle}
+                                    </span>
+                                  </div>
+                                ))}
+                              </AccordionContent>
+                            </AccordionItem>
+                          </Accordion>
+                        ) : (
+                          <div className="px-4 text-[12px]" key={item.title}>
+                            {item.title}
+                          </div>
+                        );
+                      } else
+                        return (
+                          <div
+                            className="text-[12px] pb-2 px-4"
+                            key={item.title}
+                          >
+                            {item.title}
+                          </div>
+                        );
+                    })}
+                  </div>
+                ))}
+              </SheetContent>
+            </Sheet>
+            <Link href="/home">
+              <Image
+                className="h-12 min-w-10"
+                width={97}
+                height={33}
+                src={wavefuelLogo}
+                alt=""
+              />
+            </Link>
+          </div>
 
           <div className="hidden xmd:flex gap-5">
             {navbarLinks.map((item, index) => (
@@ -78,6 +163,17 @@ export default function NavBar() {
                     <Link href={item?.link}> {item.title}</Link>
                   </DropdownMenuItem>
                 ))}
+                <DropdownMenuItem className="flex gap-3">
+                  <div className="flex gap-2">
+                    <Image src={github} width={23} height={23} alt="" />
+                    <Image src={linkedin} width={23} height={23} alt="" />
+                  </div>
+                  <div>
+                    <Button className="bg-purple-900 opacity-70 text-white rounded-md">
+                      Signin
+                    </Button>
+                  </div>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>

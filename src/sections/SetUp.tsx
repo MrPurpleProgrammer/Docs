@@ -115,7 +115,7 @@ export function CollapsibleDemo() {
 `;
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <h1 className="font-bold text-2xl text-zinc-700 mb-3 mt-3">Set up</h1>
       <div className="flex flex-row flex-wrap text-center mb-4">
         {SetupItems.map((items, index) => (
@@ -137,7 +137,7 @@ export function CollapsibleDemo() {
       </div>
 
       <div className="mb-16">
-        <div className=" w-[90%] text-zinc-700 text-base font-normal font-['Inter'] leading-7 mb-2">
+        <div className="w-full max-w-[90%] text-zinc-700 text-base font-normal font-['Inter'] leading-7 mb-2">
           {activeHeading}: D3 is written using ES2015 modules. Create a custom
           bundle using Rollup, Webpack, or your preferred bundler.
         </div>
@@ -147,7 +147,7 @@ export function CollapsibleDemo() {
         >
           <pre className="px-6 py-4 w-full overflow-x-auto">{reactCode}</pre>
         </CodeBlockWrapper>
-        <div className="w-[90%] text-zinc-700 text-base font-normal font-['Inter'] leading-7 mb-2">
+        <div className=" w-full max-w-[90%] text-zinc-700 text-base font-normal font-['Inter'] leading-7 mb-2">
           To import D3 into an ES2015 application, either import specific
           symbols from specific D3 modules. Or import everything into a
           namespace (here, d3):
@@ -158,7 +158,7 @@ export function CollapsibleDemo() {
         >
           <pre className="px-6 py-4 w-full overflow-x-auto">{reactCode}</pre>
         </CodeBlockWrapper>
-        <div className="w-[90%] h-[27px] text-zinc-700 text-base font-normal font-['Inter'] leading-7 mb-2">
+        <div className="w-full max-w-[90%] h-[27px] text-zinc-700 text-base font-normal font-['Inter'] leading-7 mb-2">
           In Node:
         </div>
         <CodeBlockWrapper
@@ -167,7 +167,7 @@ export function CollapsibleDemo() {
         >
           <pre className="px-6 py-4 w-full overflow-x-auto">{reactCode}</pre>
         </CodeBlockWrapper>
-        <div className="w-[80%] mb-3">
+        <div className="w-full max-w-[80%] mb-3">
           <span className="text-zinc-700 text-xs font-semibold font-['Inter'] leading-none">
             Download{" "}
           </span>

@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export default function QuickStart() {
   return (
-    <div className="">
+    <div className="w-full">
       <h1 className="text-zinc-600 font-bold text-2xl font-['Inter'] leading-loose tracking-tight mb-2">
         Quickstart
       </h1>

@@ -1,27 +1,13 @@
 import React from "react";
-import Feedback from "../../components/Feedback";
 import VerticalSidebar from "@/components/VerticalSidebar";
-import QuickStart from "@/sections/QuickStart";
-import SetUp from "@/sections/SetUp";
-import QSLayout from "@/sections/QSLayout";
-import QSImport from "@/sections/QSImport";
+import MaxwidthWrapper from "@/components/MaxwidthWrapper";
+import GettingStartedView from "@/views/getting-started";
 
 export default function GettingStarted() {
   return (
-    <div className="h-full w-full grid grid-cols-4 px-20 gap-4 py-20">
+    <MaxwidthWrapper className="w-full flex">
       <VerticalSidebar />
-
-      <div className="col-span-2">
-        <QuickStart />
-        <hr className="w-full mt-2" />
-        <SetUp />
-        <hr className="w-full " />
-        <QSImport />
-        <hr className="w-full" />
-        <QSLayout />
-      </div>
-
-      <Feedback />
-    </div>
+      <GettingStartedView />
+    </MaxwidthWrapper>
   );
 }
