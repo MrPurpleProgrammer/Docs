@@ -11,7 +11,11 @@ const Footer = () => (
         </div>
         <div className="grid grid-cols-2 lg:gap-20 md:gap-14 sm:gap-8 sm:grid-cols-4">
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2
+              className="mb-6
+             text-sm font-semibold text-gray-900 uppercase
+              dark:text-white"
+            >
               About
             </h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
@@ -33,9 +37,7 @@ const Footer = () => (
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-              Blog
-            </h2>
+            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Blog</h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
                 <a href="https://flowbite.com/" className="hover:underline">
@@ -55,23 +57,15 @@ const Footer = () => (
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-              Webflow
-            </h2>
+            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Webflow</h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
-                <a
-                  href="https://github.com/themesberg/flowbite"
-                  className="hover:underline "
-                >
+                <a href="https://github.com/themesberg/flowbite" className="hover:underline ">
                   Styleguide
                 </a>
               </li>
               <li className="mb-4">
-                <a
-                  href="https://discord.gg/4eeurUVvTy"
-                  className="hover:underline"
-                >
+                <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">
                   Licensing
                 </a>
               </li>
@@ -83,9 +77,7 @@ const Footer = () => (
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-              Social Media
-            </h2>
+            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Social Media</h2>
             <ul className="text-gray-500 dark:text-gray-400 font-medium">
               <li className="mb-4">
                 <a href="#" className="hover:underline">
@@ -109,17 +101,14 @@ const Footer = () => (
       <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
       <div className="sm:flex sm:items-center sm:justify-between">
         <span className="text-sm sm:text-center text-zinc-900 opacity-50 ">
-          © Made by <span className="text-emerald-400">Aditya Sayyaparaju</span>{" "}
-          - Powered by{" "}
+          © Made by <span className="text-emerald-400">Aditya Sayyaparaju</span> - Powered by{' '}
           <a href="#" className="hover:underline text-emerald-400 text-sm">
             Wavefuel™
           </a>
         </span>
         <div className="flex mt-4 sm:justify-center sm:mt-0">
           <div className="w-[191px] h-[22px] justify-start items-start gap-8 inline-flex">
-            <span className="text-zinc-900 opacity-25 text-sm font-medium font-['Inter'] leading-snug">
-              Impressum
-            </span>
+            <span className="text-zinc-900 opacity-25 text-sm font-medium font-['Inter'] leading-snug">Impressum</span>
             <span className="text-zinc-900 opacity-25 text-sm font-medium font-['Inter'] leading-snug">
               Datenschutz
             </span>

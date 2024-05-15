@@ -1,6 +1,6 @@
-import Image from "next/image";
-import bargraph from "../assets/bargraph.svg";
-import { CodeBlockWrapper } from "@/components/ui/code-block";
+import Image from 'next/image';
+import bargraph from '../assets/bargraph.svg';
+import { CodeBlockWrapper } from '@/components/ui/code-block';
 
 const reactCode = `"use client"
 
@@ -54,9 +54,8 @@ const QSLayout = () => (
     <div className="layout-heading-container">
       <h1 className="text-3xl font-bold">Layout</h1>
       <p className=" text-base font-normal font-['Inter'] leading-7">
-        This chart shows the relative frequency of letters in the English
-        language. This is a vertical bar chart, also known as a column chart.
-        Compare to a horizontal bar chart.
+        This chart shows the relative frequency of letters in the English language. This is a vertical bar chart, also
+        known as a column chart. Compare to a horizontal bar chart.
       </p>
     </div>
     <div className="width-margin-conatiner flex flex-row">
@@ -64,15 +63,14 @@ const QSLayout = () => (
         <div className="width-heading-container py-2">
           <h4 className="text-lg font-bold">Width and Height</h4>
           <p className=" text-base font-normal font-['Inter'] leading-7">
-            x, y empora incidunt ut labore et dolore magnam aliquam quaerat
-            voluptatem.
+            x, y empora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
           </p>
         </div>
         <div className="margin-container py-2">
           <h4 className="text-lg font-bold">Margins</h4>
           <p className=" text-base font-normal font-['Inter'] leading-7">
-            You idunt ut labore et top, bottom, left, rightempora incidunt ut
-            labore et dolore magnam aliquam quaerat voluptatem.
+            You idunt ut labore et top, bottom, left, rightempora incidunt ut labore et dolore magnam aliquam quaerat
+            voluptatem.
           </p>
         </div>
       </div>
@@ -94,8 +92,7 @@ const QSLayout = () => (
     <div className="domain-container">
       <h4 className="text-lg font-bold">Domain</h4>
       <p className=" text-base font-normal font-['Inter'] leading-7">
-        You idunt ut labore et scaleBand, range empora incidunt ut labore et
-        dolore magnam aliquam quaerat voluptatem.
+        You idunt ut labore et scaleBand, range empora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
       </p>
     </div>
   </div>

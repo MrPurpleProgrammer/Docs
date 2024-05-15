@@ -1,20 +1,14 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import { useRouter } from "next/navigation";
-import { DialogProps } from "@radix-ui/react-dialog";
-import {
-  CircleIcon,
-  FileIcon,
-  LaptopIcon,
-  MoonIcon,
-  SunIcon,
-} from "@radix-ui/react-icons";
-import { useTheme } from "next-themes";
+import * as React from 'react';
+import { useRouter } from 'next/navigation';
+import { DialogProps } from '@radix-ui/react-dialog';
+import { CircleIcon, FileIcon, LaptopIcon, MoonIcon, SunIcon } from '@radix-ui/react-icons';
+import { useTheme } from 'next-themes';
 
 // import { docsConfig } from "@/config/docs"
-import { cn } from "@/lib/utils";
-import { Button } from "./ui/button";
+import { cn } from '@/lib/utils';
+import { Button } from './ui/button';
 import {
   Command,
   CommandDialog,
@@ -25,8 +19,8 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@/components/ui/command";
-import { title } from "process";
+} from '@/components/ui/command';
+import { title } from 'process';
 
 export function SearchBar({ ...props }: DialogProps) {
   const router = useRouter();
@@ -35,7 +29,7 @@ export function SearchBar({ ...props }: DialogProps) {
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
-      if ((e.key === "k" && (e.metaKey || e.ctrlKey)) || e.key === "/") {
+      if ((e.key === 'k' && (e.metaKey || e.ctrlKey)) || e.key === '/') {
         if (
           (e.target instanceof HTMLElement && e.target.isContentEditable) ||
           e.target instanceof HTMLInputElement ||
@@ -50,8 +44,8 @@ export function SearchBar({ ...props }: DialogProps) {
       }
     };
 
-    document.addEventListener("keydown", down);
-    return () => document.removeEventListener("keydown", down);
+    document.addEventListener('keydown', down);
+    return () => document.removeEventListener('keydown', down);
   }, []);
 
   const runCommand = React.useCallback((command: () => unknown) => {
@@ -62,49 +56,49 @@ export function SearchBar({ ...props }: DialogProps) {
   const docsConfig: any = {
     mainNav: [
       {
-        title: "Getting Stared",
-        href: "/getting-started",
+        title: 'Getting Stared',
+        href: '/getting-started',
       },
       {
-        title: "API Reference",
-        href: "/api-reference",
+        title: 'API Reference',
+        href: '/api-reference',
       },
       {
-        title: "Guide",
-        href: "/guide",
+        title: 'Guide',
+        href: '/guide',
       },
       {
-        title: "Example",
-        href: "/example",
+        title: 'Example',
+        href: '/example',
       },
     ],
     sidebarNav: [
       {
-        title: "Getting Started",
+        title: 'Getting Started',
         items: [
           {
-            title: "Quickstart/setup",
-            href: "/",
+            title: 'Quickstart/setup',
+            href: '/',
             items: [],
           },
           {
-            title: "Quickstart/import",
-            href: "/",
+            title: 'Quickstart/import',
+            href: '/',
             items: [],
           },
           {
-            title: "Quickstart/layout",
-            href: "/",
+            title: 'Quickstart/layout',
+            href: '/',
             items: [],
           },
         ],
       },
       {
-        title: "Components",
+        title: 'Components',
         items: [
           {
-            title: "Accordion",
-            href: "/docs/components/accordion",
+            title: 'Accordion',
+            href: '/docs/components/accordion',
             items: [],
           },
         ],
@@ -117,7 +111,7 @@ export function SearchBar({ ...props }: DialogProps) {
       <Button
         variant="outline"
         className={cn(
-          "relative h-8 w-32 justify-start rounded-[0.5rem] bg-background text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40 lg:w-64"
+          'relative h-8 w-32 justify-start rounded-[0.5rem] bg-background text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40 lg:w-64'
         )}
         onClick={() => setOpen(true)}
         {...props}
@@ -168,15 +162,15 @@ export function SearchBar({ ...props }: DialogProps) {
           ))}
           <CommandSeparator />
           <CommandGroup heading="Theme">
-            <CommandItem onSelect={() => runCommand(() => setTheme("light"))}>
+            <CommandItem onSelect={() => runCommand(() => setTheme('light'))}>
               <SunIcon className="mr-2 h-4 w-4" />
               Light
             </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => setTheme("dark"))}>
+            <CommandItem onSelect={() => runCommand(() => setTheme('dark'))}>
               <MoonIcon className="mr-2 h-4 w-4" />
               Dark
             </CommandItem>
-            <CommandItem onSelect={() => runCommand(() => setTheme("system"))}>
+            <CommandItem onSelect={() => runCommand(() => setTheme('system'))}>
               <LaptopIcon className="mr-2 h-4 w-4" />
               System
             </CommandItem>

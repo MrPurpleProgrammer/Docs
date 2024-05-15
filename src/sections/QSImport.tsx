@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { CodeBlockWrapper } from "@/components/ui/code-block";
+import { Button } from '@/components/ui/button';
+import { CodeBlockWrapper } from '@/components/ui/code-block';
 
 const reactCode = `"use client"
 
@@ -54,9 +54,8 @@ const QSImport = () => (
     <div className="flex flex-col justify-center py-2">
       <h1 className="text-3xl font-bold">Import data</h1>
       <p className="text-base font-normal font-['Inter'] leading-7">
-        This chart shows the relative frequency of letters in the English
-        language. This is a vertical bar chart, also known as a column chart.
-        Compare to a horizontal bar chart.
+        This chart shows the relative frequency of letters in the English language. This is a vertical bar chart, also
+        known as a column chart. Compare to a horizontal bar chart.
       </p>
       {/* <code className="text-xs text-[#101828] bg-white p-4 border">
         This is sample code block
@@ -73,23 +72,21 @@ const QSImport = () => (
         <div className="py-2">
           <h4 className="text-lg font-bold">Fetch data and parse data</h4>
           <p className="text-sm font-normal font-['Inter'] leading-7">
-            d3.fetch is one of the convenience methods on top of the Fetch API.
-            It get a comma-separated values (CSV) file.
+            d3.fetch is one of the convenience methods on top of the Fetch API. It get a comma-separated values (CSV)
+            file.
           </p>
         </div>
         <div className="py-2">
           <h4 className="text-lg font-bold">Row conversion</h4>
           <p className="text-sm font-normal font-['Inter'] leading-7">
-            If a row conversion function is not specified, field values are
-            strings. For safety, there is no automatic conversion to numbers,
-            dates, or other types.
+            If a row conversion function is not specified, field values are strings. For safety, there is no automatic
+            conversion to numbers, dates, or other types.
           </p>
         </div>
         <div className="py-2">
           <h4 className="text-lg font-bold">Sort data</h4>
           <p className="text-sm font-normal font-['Inter'] leading-7">
-            sort ed quia non numquam eius modi tempora incidunt ut labore et
-            dolore magnam aliquam quaerat voluptatem.
+            sort ed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
           </p>
         </div>
       </div>

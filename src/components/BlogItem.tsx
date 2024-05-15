@@ -1,6 +1,6 @@
-"use client";
-import Image from "next/image";
-import iconwrap from "../assets/iconwrap.svg";
+'use client';
+import Image from 'next/image';
+import iconwrap from '../assets/iconwrap.svg';
 
 type propsType = {
   image: string;
@@ -22,14 +22,9 @@ export default function BlogItem(props: propsType) {
 
       <div className="postCardContent py-2">
         <div className="cardTextHeading">
-          <p className="author text-[#6941c6] text-[10px] xmd:text-xs py-2">
-            {props.author}
-          </p>
+          <p className="author text-[#6941c6] text-[10px] xmd:text-xs py-2">{props.author}</p>
           <div className="blogHeadingIcon flex flex-row justify-between">
-            <a
-              href="#"
-              className="guide text-sm xmd:text-xl font-semibold py-2"
-            >
+            <a href="#" className="guide text-sm xmd:text-xl font-semibold py-2">
               {props.guide}
             </a>
             <Image

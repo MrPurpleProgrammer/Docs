@@ -1,6 +1,6 @@
-"use client";
-import Image from "next/image";
-import iconwrap from "../assets/iconwrap.svg";
+'use client';
+import Image from 'next/image';
+import iconwrap from '../assets/iconwrap.svg';
 
 type propsType = {
   image: string;
@@ -21,9 +21,7 @@ const SecondaryBLogComponent = (props: propsType) => (
 
     <div className="postCardContent w-[60%] px-3">
       <div className="cardTextHeading w-full">
-        <p className="w-full author text-[#6941c6] text-[10px] xmd:text-xs py-2">
-          {props.author}
-        </p>
+        <p className="w-full author text-[#6941c6] text-[10px] xmd:text-xs py-2">{props.author}</p>
         <div className="blogHeadingIcon flex flex-row min-w-full justify-between">
           <a href="#" className="guide text-xs xmd:text-sm font-semibold py-2">
             {props.guide}

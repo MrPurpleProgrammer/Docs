@@ -1,9 +1,9 @@
-import React from "react";
-import Feedback from "../../components/Feedback";
-import QuickStart from "@/sections/QuickStart";
-import SetUp from "@/sections/SetUp";
-import QSLayout from "@/sections/QSLayout";
-import QSImport from "@/sections/QSImport";
+import React from 'react';
+import Feedback from '../../components/Feedback';
+import QuickStart from '@/sections/QuickStart';
+import SetUp from '@/sections/SetUp';
+import QSLayout from '@/sections/QSLayout';
+import QSImport from '@/sections/QSImport';
 
 const GettingStartedView = () => {
   return (
