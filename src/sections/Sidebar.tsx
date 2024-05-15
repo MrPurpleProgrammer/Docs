@@ -73,13 +73,13 @@ const Sidebar = () => {
     }
   };
   return (
-    <div className="sidebar-container w-full min-h-fit pb-4 pt-10">
-      <ul className="sidemenu flex flex-wrap text-sm font-sm text-center mb-4">
-        <li className="me-2">
+    <div className="sidebar-container w-full min-h-fit py-3 xmd:py-4 text-foreground">
+      <ul className="sidemenu flex flex-wrap gap-2 xmd:gap-4 py-3">
+        <li>
           <Button
             aria-current="page"
             className={cn(
-              "inline-block p-2 font-semibold hover:bg-[#F9F5ff] text-[#667085] bg-transparent",
+              "inline-block font-semibold hover:bg-[#F9F5ff] text-[#667085] bg-transparent text-xs xmd:text-sm text-center px-1 py-2 h-8 ",
               {
                 "bg-[#F9F5ff] text-[#6941c6]": activeSubheading === "View All",
               }
@@ -92,11 +92,11 @@ const Sidebar = () => {
 
         {uniqueSidebarItems &&
           uniqueSidebarItems?.map((listitem, index) => (
-            <li key={index} className="me-2">
+            <li key={index}>
               <Button
                 aria-current="page"
                 className={cn(
-                  "inline-block p-2 font-semibold bg-transparent hover:bg-[#F9F5ff] text-[#667085]",
+                  "inline-block font-semibold bg-transparent hover:bg-[#F9F5ff] text-[#667085] text-xs xmd:text-sm text-center px-1 py-2 h-8 ",
                   {
                     "bg-[#F9F5ff] text-[#6941c6]":
                       activeSubheading === listitem?.subHeading,
@@ -109,7 +109,7 @@ const Sidebar = () => {
             </li>
           ))}
       </ul>
-      <div className="cards-container h-fit flex flex-wrap">
+      <div className="cards-container h-fit flex flex-wrap gap-4 justify-center md:justify-start">
         {itemList.map((item, index) => {
           // const {heading,href,link,location,subHeading,time} = item
 

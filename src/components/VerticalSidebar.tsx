@@ -13,7 +13,7 @@ import { sidebarData } from "@/config/sidebarData";
 
 const VerticalSidebar = () => {
   return (
-    <div className="px-6 lg:px-3 w-full max-w-[250px] hidden lg:block">
+    <div className="px-6 lg:px-0 w-full lg:max-w-[150px] xl:max-w-[250px] hidden lg:block">
       {sidebarData.map((section) => (
         <div key={section.mainTitle} className="text-black">
           <h2 className="text-sm font-extrabold flex items-center text-[#6941C6] pb-1">
@@ -26,7 +26,7 @@ const VerticalSidebar = () => {
                   key={item.title}
                   type="single"
                   collapsible
-                  className="text-black "
+                  className="text-foreground"
                 >
                   <AccordionItem value={item.title}>
                     <AccordionTrigger className="text-[13px] gap-1">
@@ -50,7 +50,10 @@ const VerticalSidebar = () => {
               );
             } else
               return (
-                <div className="text-[12px] pb-2 px-4" key={item.title}>
+                <div
+                  className="text-[12px] pb-2 px-4 text-foreground"
+                  key={item.title}
+                >
                   {item.title}
                 </div>
               );

@@ -10,14 +10,14 @@ const nextDocsLinks = [
 ];
 
 const Feedback = () => (
-  <div className="flex flex-col w-full">
+  <div className="flex flex-col w-full text-foreground">
     <h1 className="font-extrabold text-[#6941c6] text-lg">
       Next Docs to Read...
     </h1>
     <ul>
       {nextDocsLinks.map((item, index) => (
         <li key={index}>
-          <Link href={item.link} className="underline text-[#A7A7A7] text-sm">
+          <Link href={item.link} className="underline text-sm">
             {item.title}
           </Link>
         </li>

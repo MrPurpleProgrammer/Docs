@@ -50,10 +50,10 @@ export function CollapsibleDemo() {
 `;
 
 const QSImport = () => (
-  <div className="w-full flex flex-col h-auto py-4">
+  <div className="w-full flex flex-col h-auto py-4 text-foreground">
     <div className="flex flex-col justify-center py-2">
-      <h1 className="text-3xl text-zinc-700 font-bold">Import data</h1>
-      <p className=" text-zinc-700 text-base font-normal font-['Inter'] leading-7">
+      <h1 className="text-3xl font-bold">Import data</h1>
+      <p className="text-base font-normal font-['Inter'] leading-7">
         This chart shows the relative frequency of letters in the English
         language. This is a vertical bar chart, also known as a column chart.
         Compare to a horizontal bar chart.
@@ -71,25 +71,23 @@ const QSImport = () => (
     <div className="flex flex-row">
       <div className="pr-5">
         <div className="py-2">
-          <h4 className="text-lg text-zinc-700 font-bold">
-            Fetch data and parse data
-          </h4>
-          <p className="text-sm text-zinc-700 font-normal font-['Inter'] leading-7">
+          <h4 className="text-lg font-bold">Fetch data and parse data</h4>
+          <p className="text-sm font-normal font-['Inter'] leading-7">
             d3.fetch is one of the convenience methods on top of the Fetch API.
             It get a comma-separated values (CSV) file.
           </p>
         </div>
         <div className="py-2">
-          <h4 className="text-lg text-zinc-700 font-bold">Row conversion</h4>
-          <p className="text-sm text-zinc-700 font-normal font-['Inter'] leading-7">
+          <h4 className="text-lg font-bold">Row conversion</h4>
+          <p className="text-sm font-normal font-['Inter'] leading-7">
             If a row conversion function is not specified, field values are
             strings. For safety, there is no automatic conversion to numbers,
             dates, or other types.
           </p>
         </div>
         <div className="py-2">
-          <h4 className="text-lg text-zinc-700 font-bold">Sort data</h4>
-          <p className="text-sm text-zinc-700 font-normal font-['Inter'] leading-7">
+          <h4 className="text-lg font-bold">Sort data</h4>
+          <p className="text-sm font-normal font-['Inter'] leading-7">
             sort ed quia non numquam eius modi tempora incidunt ut labore et
             dolore magnam aliquam quaerat voluptatem.
           </p>
@@ -97,18 +95,16 @@ const QSImport = () => (
       </div>
       <div className="p-4 border-l-2">
         <h6 className="text-[#6941c6] font-semibold text-sm py-2">Tips</h6>
-        <p className="text-sm text-zinc-700 font-semibold py-2">
-          Other types of files
-        </p>
-        <p className="text-sm py-2 text-zinc-700 font-medium font-['Inter'] leading-[19px]">
+        <p className="text-sm font-semibold py-2">Other types of files</p>
+        <p className="text-sm py-2 font-medium font-['Inter'] leading-[19px]">
           <span className="text-[#6941c6] font-semibold text-sm">JSON: </span>
           ncidunt ut labore et dolore magnam aliquam.
         </p>
-        <p className="text-sm py-2 text-zinc-700 font-medium font-['Inter'] leading-[19px]">
+        <p className="text-sm py-2 font-medium font-['Inter'] leading-[19px]">
           <span className="text-[#6941c6] font-semibold text-sm">DSV: </span>
           labore et dolore magnam aliquam quaerat voluptatem.
         </p>
-        <p className="text-sm py-2 text-zinc-700 font-medium font-['Inter'] leading-[19px]">
+        <p className="text-sm py-2 font-medium font-['Inter'] leading-[19px]">
           <span className="text-[#6941c6] font-semibold text-sm">TSV: </span>
           ncidunt ut labore et dolore magnam aliquam.
         </p>

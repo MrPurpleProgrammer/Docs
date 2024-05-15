@@ -50,10 +50,10 @@ export function CollapsibleDemo() {
 }
 `;
 const QSLayout = () => (
-  <div className="layout-section w-full flex flex-col gap-3 h-auto py-3">
+  <div className="layout-section w-full flex flex-col gap-3 h-auto py-3 text-foreground">
     <div className="layout-heading-container">
-      <h1 className="text-3xl text-zinc-700 font-bold">Layout</h1>
-      <p className="text-zinc-700 text-base font-normal font-['Inter'] leading-7">
+      <h1 className="text-3xl font-bold">Layout</h1>
+      <p className=" text-base font-normal font-['Inter'] leading-7">
         This chart shows the relative frequency of letters in the English
         language. This is a vertical bar chart, also known as a column chart.
         Compare to a horizontal bar chart.
@@ -62,15 +62,15 @@ const QSLayout = () => (
     <div className="width-margin-conatiner flex flex-row">
       <div className="combined-container">
         <div className="width-heading-container py-2">
-          <h4 className="text-lg text-zinc-700 font-bold">Width and Height</h4>
-          <p className="text-zinc-700 text-base font-normal font-['Inter'] leading-7">
+          <h4 className="text-lg font-bold">Width and Height</h4>
+          <p className=" text-base font-normal font-['Inter'] leading-7">
             x, y empora incidunt ut labore et dolore magnam aliquam quaerat
             voluptatem.
           </p>
         </div>
         <div className="margin-container py-2">
-          <h4 className="text-lg text-zinc-700 font-bold">Margins</h4>
-          <p className="text-zinc-700 text-base font-normal font-['Inter'] leading-7">
+          <h4 className="text-lg font-bold">Margins</h4>
+          <p className=" text-base font-normal font-['Inter'] leading-7">
             You idunt ut labore et top, bottom, left, rightempora incidunt ut
             labore et dolore magnam aliquam quaerat voluptatem.
           </p>
@@ -82,9 +82,7 @@ const QSLayout = () => (
     </div>
     {/* Code Container */}
     <div className="flex flex-col justify-center">
-      <h4 className="text-lg text-[#101828] font-bold">
-        Axes and reference marks
-      </h4>
+      <h4 className="text-lg font-bold">Axes and reference marks</h4>
 
       <CodeBlockWrapper
         expandButtonTitle="Show Code"
@@ -94,8 +92,8 @@ const QSLayout = () => (
       </CodeBlockWrapper>
     </div>
     <div className="domain-container">
-      <h4 className="text-lg text-zinc-700 font-bold">Domain</h4>
-      <p className=" text-zinc-700 text-base font-normal font-['Inter'] leading-7">
+      <h4 className="text-lg font-bold">Domain</h4>
+      <p className=" text-base font-normal font-['Inter'] leading-7">
         You idunt ut labore et scaleBand, range empora incidunt ut labore et
         dolore magnam aliquam quaerat voluptatem.
       </p>

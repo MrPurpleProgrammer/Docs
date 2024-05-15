@@ -27,9 +27,11 @@ const secondaryBlogComponents = [
   },
 ];
 const BlogContainer = () => (
-  <div className="w-full pb-4 pt-10">
-    <h1 className="font-semibold text-xl pb-4">Check Out of our Guides</h1>
-    <div className="grid grid-cols-2 gap-4">
+  <div className="w-full py-3 xmd:py-4">
+    <h1 className="font-semibold text-lg xmd:text-xl pb-4">
+      Check Out of our Guides
+    </h1>
+    <div className="grid xmd:grid-cols-2 gap-4">
       <div className="w-full ">
         <BlogItem
           image={image}

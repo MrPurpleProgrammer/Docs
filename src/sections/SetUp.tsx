@@ -115,8 +115,8 @@ export function CollapsibleDemo() {
 `;
 
   return (
-    <div className="relative w-full">
-      <h1 className="font-bold text-2xl text-zinc-700 mb-3 mt-3">Set up</h1>
+    <div className="relative w-full text-foreground">
+      <h1 className="font-bold text-2xl mb-3 mt-3">Set up</h1>
       <div className="flex flex-row flex-wrap text-center mb-4">
         {SetupItems.map((items, index) => (
           <Button
@@ -137,7 +137,7 @@ export function CollapsibleDemo() {
       </div>
 
       <div className="mb-16">
-        <div className="w-full max-w-[90%] text-zinc-700 text-base font-normal font-['Inter'] leading-7 mb-2">
+        <div className="w-full max-w-[90%] text-base font-normal font-['Inter'] leading-7 mb-2">
           {activeHeading}: D3 is written using ES2015 modules. Create a custom
           bundle using Rollup, Webpack, or your preferred bundler.
         </div>
@@ -147,7 +147,7 @@ export function CollapsibleDemo() {
         >
           <pre className="px-6 py-4 w-full overflow-x-auto">{reactCode}</pre>
         </CodeBlockWrapper>
-        <div className=" w-full max-w-[90%] text-zinc-700 text-base font-normal font-['Inter'] leading-7 mb-2">
+        <div className=" w-full max-w-[90%] text-base font-normal font-['Inter'] leading-7 mb-2">
           To import D3 into an ES2015 application, either import specific
           symbols from specific D3 modules. Or import everything into a
           namespace (here, d3):
@@ -158,7 +158,7 @@ export function CollapsibleDemo() {
         >
           <pre className="px-6 py-4 w-full overflow-x-auto">{reactCode}</pre>
         </CodeBlockWrapper>
-        <div className="w-full max-w-[90%] h-[27px] text-zinc-700 text-base font-normal font-['Inter'] leading-7 mb-2">
+        <div className="w-full max-w-[90%] h-[27px] text-base font-normal font-['Inter'] leading-7 mb-2">
           In Node:
         </div>
         <CodeBlockWrapper
@@ -168,32 +168,32 @@ export function CollapsibleDemo() {
           <pre className="px-6 py-4 w-full overflow-x-auto">{reactCode}</pre>
         </CodeBlockWrapper>
         <div className="w-full max-w-[80%] mb-3">
-          <span className="text-zinc-700 text-xs font-semibold font-['Inter'] leading-none">
+          <span className="text-xs font-semibold font-['Inter'] leading-none">
             Download{" "}
           </span>
           <span className="text-indigo-500 text-xs font-semibold font-['Inter'] leading-none">
             d3 version (5.12.0)
           </span>
-          <span className="text-zinc-700 text-xs font-semibold font-['Inter'] leading-none">
+          <span className="text-xs font-semibold font-['Inter'] leading-none">
             . View{" "}
           </span>
           <span className="text-indigo-500 text-xs font-semibold font-['Inter'] leading-none">
             source code{" "}
           </span>
-          <span className="text-zinc-700 text-xs font-semibold font-['Inter'] leading-none">
+          <span className="text-xs font-semibold font-['Inter'] leading-none">
             or the{" "}
           </span>
           <span className="text-indigo-500 text-xs font-semibold font-['Inter'] leading-none">
             changelog
           </span>
-          <span className="text-zinc-700 text-xs font-semibold font-['Inter'] leading-none">
+          <span className="text-xs font-semibold font-['Inter'] leading-none">
             {" "}
             on Github.
           </span>
         </div>
 
         <div className="w-24 h-4 block mb-0 mt-4 absolute bottom-[-40px] right-20">
-          <div className="relative text-right text-neutral-400 text-[13px] font-medium font-['Inter'] leading-none">
+          <div className="relative text-right text-[13px] font-medium font-['Inter'] leading-none">
             <Image
               className="inline-block"
               src={feedbackIcon}
