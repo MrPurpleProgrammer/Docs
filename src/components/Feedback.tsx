@@ -29,11 +29,13 @@ const Feedback = () => (
         <Image src={star} alt="star-image" width={30} height={30} className="pr-2" />
         <Image src={star} alt="star-image" width={30} height={30} className="pr-2" />
       </div>
-      <textarea
-        placeholder="Write something..."
-        className="border rounded-lg bg-white w-[90%] text-sm p-4"
-        rows={5}
-      ></textarea>
+      <form className="border">
+        <textarea
+          placeholder="Write something..."
+          className="rounded-lg bg-white w-[90%] text-sm p-4"
+          rows={5}
+        ></textarea>
+      </form>
     </div>
   </div>
 );

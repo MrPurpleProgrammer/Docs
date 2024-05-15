@@ -7,7 +7,7 @@ import QSImport from '@/sections/QSImport';
 
 const GettingStartedView = () => {
   return (
-    <section className=" w-full gap-3 grid xmd:grid-cols-4">
+    <section className=" w-full gap-3 flex flex-col xmd:flex-row">
       <div className="flex-grow flex-shrink col-span-3">
         <QuickStart />
         <hr className="w-full mt-2" />
@@ -18,7 +18,7 @@ const GettingStartedView = () => {
         <QSLayout />
       </div>
 
-      <div className="w-full min-w-[200px]">
+      <div className="w-full min-w-[200px] max-w-[300px]">
         <Feedback />
       </div>
     </section>

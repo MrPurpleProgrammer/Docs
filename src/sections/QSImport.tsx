@@ -67,7 +67,7 @@ const QSImport = () => (
         <pre className="px-6 py-4 w-full overflow-x-auto">{reactCode}</pre>
       </CodeBlockWrapper>
     </div>
-    <div className="flex flex-row">
+    <div className="flex flex-col md:flex-row">
       <div className="pr-5">
         <div className="py-2">
           <h4 className="text-lg font-bold">Fetch data and parse data</h4>

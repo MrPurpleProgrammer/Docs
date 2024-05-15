@@ -58,7 +58,7 @@ const QSLayout = () => (
         known as a column chart. Compare to a horizontal bar chart.
       </p>
     </div>
-    <div className="width-margin-conatiner flex flex-row">
+    <div className="width-margin-conatiner flex flex-col md:flex-row">
       <div className="combined-container">
         <div className="width-heading-container py-2">
           <h4 className="text-lg font-bold">Width and Height</h4>
@@ -74,8 +74,8 @@ const QSLayout = () => (
           </p>
         </div>
       </div>
-      <div className="graph-container">
-        <Image src={bargraph} alt="graph" className="object-cover" />
+      <div className="graph-container relative">
+        <Image src={bargraph} alt="graph" className="object-fill h-full" />
       </div>
     </div>
     {/* Code Container */}
