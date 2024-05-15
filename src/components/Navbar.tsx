@@ -125,12 +125,12 @@ export default function NavBar() {
             </Link>
           </div>
 
-          <div className="hidden xmd:flex gap-3">
+          <div className="hidden xmd:flex gap-3 h-[33px]">
             {navbarLinks.map((item, index) => (
               <Link
                 key={index}
                 className={cn(
-                  " rounded-md text-[10px] xl:text-sm font-medium leading-5 tracking-wider hover:text-[#6941c6]",
+                  " rounded-md text-[10px] xl:text-sm font-medium leading-5 tracking-wider hover:text-[#6941c6] self-center",
                   {
                     "text-[#6941c6]": path === item.link,
                   }
@@ -176,7 +176,7 @@ export default function NavBar() {
                     <Image src={linkedin} width={23} height={23} alt="" />
                   </div>
                   <div>
-                    <Button className="bg-purple-900 opacity-70 text-white rounded-md">
+                    <Button className="bg-purple-900 opacity-70 text-white rounded-md text-[10px] xl:text-sm h-[23px]">
                       Signin
                     </Button>
                   </div>
@@ -199,7 +199,7 @@ export default function NavBar() {
               alt=""
               className="hover:scale-105 ease-in duration-200"
             />
-            <Button className="bg-purple-900 opacity-70 text-white hover:scale-105 ease-in duration-200">
+            <Button className="bg-purple-900 opacity-70 text-white rounded-md text-[10px] xl:text-sm h-[33px]">
               Signin
             </Button>
           </div>
