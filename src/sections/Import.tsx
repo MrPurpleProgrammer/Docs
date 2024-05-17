@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { CodeBlockWrapper } from '@/components/ui/code-block';
-
+import { Info } from 'lucide-react';
+import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
 const reactCode = `"use client"
 
 import * as React from "react"
@@ -49,20 +50,18 @@ export function CollapsibleDemo() {
 }
 `;
 
-const QSImport = () => (
-  <div className="w-full flex flex-col h-auto py-4 text-foreground">
-    <div className="flex flex-col justify-center py-2">
-      <h1 className="text-3xl font-bold">Import data</h1>
-      <p className="text-base font-normal font-['Inter'] leading-7">
+const Import = () => (
+  <div className="w-full flex flex-col h-auto py-3 text-foreground">
+    <div className="flex flex-col justify-center py-3">
+      <h1 className="text-2xl font-bold py-3">Import data</h1>
+      <p className="text-sm font-normal font-['Inter'] leading-7">
         This chart shows the relative frequency of letters in the English language. This is a vertical bar chart, also
         known as a column chart. Compare to a horizontal bar chart.
       </p>
-      {/* <code className="text-xs text-[#101828] bg-white p-4 border">
-        This is sample code block
-      </code> */}
+
       <CodeBlockWrapper
         expandButtonTitle="Show Code"
-        className="dark:bg-white dark:text-gray-800 rounded-xl bg-gray-300 text-muted-foregroud w-full"
+        className="bg-[#F9F5ff] dark:bg-[#110e1b] rounded-xl text-foreground dark:text-muted-foreground w-full border text-sm"
       >
         <pre className="px-6 py-4 w-full overflow-x-auto">{reactCode}</pre>
       </CodeBlockWrapper>
@@ -72,8 +71,26 @@ const QSImport = () => (
         <div className="py-2">
           <h4 className="text-lg font-bold">Fetch data and parse data</h4>
           <p className="text-sm font-normal font-['Inter'] leading-7">
-            d3.fetch is one of the convenience methods on top of the Fetch API. It get a comma-separated values (CSV)
-            file.
+            d3.fetch{' '}
+            <span style={{ display: 'inline-block' }}>
+              <HoverCard>
+                <HoverCardTrigger>
+                  <Info className="h-4 w-4" />
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  <div>
+                    <h6>API Method</h6>
+                    <p>d3.fetch </p>
+                    <p>
+                      d3.fetch has built-in support for parsing JSON, CSV, and TSV. You can parse additional formats by
+                      using text directly.
+                    </p>
+                    <Button>Learn More</Button>
+                  </div>
+                </HoverCardContent>
+              </HoverCard>
+            </span>{' '}
+            is one of the convenience methods on top of the Fetch API. It get a comma-separated values (CSV) file.
           </p>
         </div>
         <div className="py-2">
@@ -86,7 +103,26 @@ const QSImport = () => (
         <div className="py-2">
           <h4 className="text-lg font-bold">Sort data</h4>
           <p className="text-sm font-normal font-['Inter'] leading-7">
-            sort ed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+            sort{' '}
+            <span style={{ display: 'inline-block' }}>
+              <HoverCard>
+                <HoverCardTrigger>
+                  <Info className="h-4 w-4" />
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  <div>
+                    <h6>API Method</h6>
+                    <p>sort </p>
+                    <p>
+                      ed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                      voluptatem
+                    </p>
+                    <Button>Learn More</Button>
+                  </div>
+                </HoverCardContent>
+              </HoverCard>
+            </span>{' '}
+            ed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
           </p>
         </div>
       </div>
@@ -110,4 +146,4 @@ const QSImport = () => (
     </div>
   </div>
 );
-export default QSImport;
+export default Import;

@@ -8,9 +8,9 @@ import Image from 'next/image';
 export default function QuickStart() {
   return (
     <div className="w-full">
-      <h1 className="font-bold text-3xl font-['Inter'] leading-loose tracking-tight mb-2">Quickstart</h1>
-      <div className="mb-3">
-        <span className="text-base font-normal font-['Inter'] leading-7">
+      <h1 className="font-bold text-2xl font-['Inter'] pb-3">Quickstart</h1>
+      <div className="pb-3">
+        <span className="text-sm font-normal font-['Inter']">
           Select a type of IOT Device that you want to integrate to get started:
         </span>
       </div>
@@ -19,8 +19,8 @@ export default function QuickStart() {
           <Image
             src={smartSwitch}
             alt=""
-            width={70}
-            height={70}
+            width={60}
+            height={60}
             className="hover:scale-105 ease-in duration-200"
           ></Image>
 

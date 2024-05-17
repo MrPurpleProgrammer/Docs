@@ -49,11 +49,11 @@ export function CollapsibleDemo() {
   )
 }
 `;
-const QSLayout = () => (
+const Layout = () => (
   <div className="layout-section w-full flex flex-col gap-3 h-auto py-3 text-foreground">
-    <div className="layout-heading-container">
-      <h1 className="text-3xl font-bold">Layout</h1>
-      <p className=" text-base font-normal font-['Inter'] leading-7">
+    <div className="layout-heading-container py-3">
+      <h1 className="text-2xl font-bold py-3">Layout</h1>
+      <p className=" text-sm font-normal font-['Inter'] leading-7">
         This chart shows the relative frequency of letters in the English language. This is a vertical bar chart, also
         known as a column chart. Compare to a horizontal bar chart.
       </p>
@@ -62,13 +62,13 @@ const QSLayout = () => (
       <div className="combined-container">
         <div className="width-heading-container py-2">
           <h4 className="text-lg font-bold">Width and Height</h4>
-          <p className=" text-base font-normal font-['Inter'] leading-7">
+          <p className=" text-sm font-normal font-['Inter'] leading-7">
             x, y empora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
           </p>
         </div>
         <div className="margin-container py-2">
           <h4 className="text-lg font-bold">Margins</h4>
-          <p className=" text-base font-normal font-['Inter'] leading-7">
+          <p className=" text-sm font-normal font-['Inter'] leading-7">
             You idunt ut labore et top, bottom, left, rightempora incidunt ut labore et dolore magnam aliquam quaerat
             voluptatem.
           </p>
@@ -84,17 +84,17 @@ const QSLayout = () => (
 
       <CodeBlockWrapper
         expandButtonTitle="Show Code"
-        className="dark:bg-white dark:text-gray-800 rounded-xl bg-gray-300 text-muted-foregroud w-full"
+        className="bg-[#F9F5ff] dark:bg-[#110e1b] rounded-xl text-foreground dark:text-muted-foreground w-full border text-sm"
       >
         <pre className="px-6 py-4 w-full overflow-x-auto">{reactCode}</pre>
       </CodeBlockWrapper>
     </div>
     <div className="domain-container">
       <h4 className="text-lg font-bold">Domain</h4>
-      <p className=" text-base font-normal font-['Inter'] leading-7">
+      <p className=" text-sm font-normal font-['Inter'] leading-7">
         You idunt ut labore et scaleBand, range empora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
       </p>
     </div>
   </div>
 );
-export default QSLayout;
+export default Layout;

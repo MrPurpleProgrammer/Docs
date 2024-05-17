@@ -32,7 +32,7 @@ import {
 
 import { AlignJustify } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import VerticalSidebar from './VerticalSidebar';
+import VerticalSidebar from './Sidebar';
 import { sidebarData } from '@/config/sidebarData';
 import { usePathname } from 'next/navigation';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
@@ -73,7 +73,13 @@ export default function NavBar() {
           <div className="flex justify-center items-center gap-2">
             <Sheet>
               <SheetTrigger asChild>
-                <UIButton variant="outline" size="icon" className="lg:hidden flex justify-center items-center">
+                <UIButton
+                  variant="outline"
+                  size="icon"
+                  className={cn(' lg:hidden flex justify-center items-center', {
+                    hidden: path === '/',
+                  })}
+                >
                   <AlignJustify className="w-5 h-5 stroke-foreground" />
                 </UIButton>
               </SheetTrigger>

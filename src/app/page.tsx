@@ -1,6 +1,6 @@
 import Footer from '@/components/Footer';
 import BlogContainer from '@/sections/BlogContainer';
-import Sidebar from '@/sections/Sidebar';
+import CardSection from '@/sections/CardSection';
 import MaxwidthWrapper from '@/components/MaxwidthWrapper';
 
 export default function Page() {
@@ -18,7 +18,7 @@ export default function Page() {
               <br /> Dui accumsan sit amet nulla facilisi morbi.{' '}
             </p>
           </div>
-          <Sidebar />
+          <CardSection />
           <BlogContainer />
         </div>
       </MaxwidthWrapper>

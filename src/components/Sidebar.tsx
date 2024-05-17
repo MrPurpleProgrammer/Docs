@@ -6,18 +6,18 @@ import React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
 import { sidebarData } from '@/config/sidebarData';
 
-const VerticalSidebar = () => {
+const Sidebar = () => {
   return (
-    <div className="px-6 lg:px-0 w-full lg:max-w-[150px] xl:max-w-[250px] hidden lg:block">
+    <div className="px-6 lg:px-0 w-full lg:max-w-[250px] hidden lg:block">
       {sidebarData.map((section) => (
         <div key={section.mainTitle} className="text-black">
-          <h2 className="text-sm font-extrabold flex items-center text-[#6941C6] pb-1">{section.mainTitle}</h2>
+          <h1 className="text-sm font-extrabold flex self-center text-[#6941C6] pb-1">{section.mainTitle}</h1>
           {section.mainItems.map((item) => {
             if ('titleItems' in item) {
               return item.titleItems && item.titleItems.length > 0 ? (
-                <Accordion key={item.title} type="single" collapsible className="text-foreground">
+                <Accordion key={item.title} type="single" collapsible className="text-foreground place-items-start">
                   <AccordionItem value={item.title}>
-                    <AccordionTrigger className="text-[13px] gap-1">{item.title}</AccordionTrigger>
+                    <AccordionTrigger className="text-[13px] gap-1 self-start">{item.title}</AccordionTrigger>
                     <AccordionContent>
                       {item.titleItems.map((subItem) => (
                         <div key={subItem.subTitle}>
@@ -34,7 +34,7 @@ const VerticalSidebar = () => {
               );
             } else
               return (
-                <div className="text-[12px] pb-2 px-4 text-foreground" key={item.title}>
+                <div className="text-[12px] py-1 text-foreground" key={item.title}>
                   {item.title}
                 </div>
               );
@@ -45,4 +45,4 @@ const VerticalSidebar = () => {
   );
 };
 
-export default VerticalSidebar;
+export default Sidebar;

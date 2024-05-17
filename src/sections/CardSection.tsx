@@ -55,7 +55,7 @@ const uniqueSidebarItems = Array.from(new Set(SidebarItems.map((item) => item.su
   SidebarItems.find((item) => item.subHeading === subHeading)
 );
 console.log(uniqueSidebarItems);
-const Sidebar = () => {
+const CardSection = () => {
   const [itemList, setItemList] = useState(SidebarItems);
   const [activeSubheading, setActiveSubheading] = useState('View All');
   const filterClick = (subheading: string) => {
@@ -114,4 +114,4 @@ const Sidebar = () => {
     </div>
   );
 };
-export default Sidebar;
+export default CardSection;

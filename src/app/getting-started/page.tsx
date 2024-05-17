@@ -1,12 +1,12 @@
 import React from 'react';
-import VerticalSidebar from '@/components/VerticalSidebar';
+import Sidebar from '@/components/Sidebar';
 import MaxwidthWrapper from '@/components/MaxwidthWrapper';
 import GettingStartedView from '@/views/getting-started';
 
 export default function GettingStarted() {
   return (
     <MaxwidthWrapper className="w-full flex">
-      <VerticalSidebar />
+      <Sidebar />
       <GettingStartedView />
     </MaxwidthWrapper>
   );
